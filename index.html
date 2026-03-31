@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>DevOps Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>DevOps Monitoring Dashboard</h1>
-<p>Cloud-Based Server Health Monitoring System</p>
+<div class="container">
 
-<h2 id="systemStatus">Checking system...</h2>
+  <h1>🚀 DevOps Monitoring Dashboard</h1>
+  <p class="subtitle">Real-Time Cloud Infrastructure Monitoring</p>
 
-<div class="grid">
+  <div id="systemStatus" class="status">Checking system...</div>
+  <p id="lastUpdated" class="updated"></p>
 
-  <div class="card" onclick="goTo('cpu.html')">
-    <h3>CPU Usage</h3>
-    <p id="cpu">--%</p>
-  </div>
+  <div class="grid">
 
-  <div class="card" onclick="goTo('memory.html')">
-    <h3>Memory Usage</h3>
-    <p id="memory">--%</p>
-  </div>
+    <div class="card" onclick="goTo('cpu.html')">
+      <div class="icon">🔥</div>
+      <h3>CPU Usage</h3>
+      <p id="cpu">--%</p>
+    </div>
 
-  <div class="card" onclick="goTo('network.html')">
-    <h3>Network Activity</h3>
-    <p id="network">--</p>
+    <div class="card" onclick="goTo('memory.html')">
+      <div class="icon">🧠</div>
+      <h3>Memory</h3>
+      <p id="memory">--%</p>
+    </div>
+
+    <div class="card" onclick="goTo('network.html')">
+      <div class="icon">🌐</div>
+      <h3>Network</h3>
+      <p id="network">--</p>
+    </div>
+
   </div>
 
 </div>

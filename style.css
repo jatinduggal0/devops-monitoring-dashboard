@@ -1,51 +1,116 @@
 body {
-  font-family: Arial;
-  background: linear-gradient(135deg,#0f172a,#1e293b);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
-  padding: 30px;
-  animation: fadeIn 0.6s ease;
 }
 
+/* CONTAINER */
+.container {
+  padding: 50px;
+  text-align: center;
+}
+
+/* HEADER */
+h1 {
+  font-size: 42px;
+  margin-bottom: 5px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+
+/* Standard */
+background-clip: text;
+color: transparent;
+
+/* Webkit (for Chrome/Safari) */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+/* STATUS */
+.status {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.updated {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+
+/* GRID */
 .grid {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 240px;
   cursor: pointer;
-  width: 200px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(59,130,246,0.2), transparent);
+  transform: rotate(45deg);
+  top: -100%;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: 100%;
+  left: 100%;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 20px rgba(59,130,246,0.6);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 30px rgba(59,130,246,0.7);
 }
 
-canvas {
-  max-width: 600px;
-  margin-top: 20px;
+/* ICON */
+.icon {
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
-ul {
-  margin-top: 20px;
+/* VALUE */
+.card p {
+  font-size: 32px;
+  font-weight: bold;
 }
 
+/* ALERT */
 .alert {
   margin-top: 20px;
   padding: 15px;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 12px;
   font-weight: bold;
 }
 
 .alert.green {
   background: rgba(34,197,94,0.2);
-  color: #86efac;
+  color: #4ade80;
 }
 
 .alert.red {
@@ -54,19 +119,26 @@ ul {
   animation: pulse 1s infinite;
 }
 
+/* BUTTON */
 button {
-  margin-top: 20px;
-  padding: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #334155;
+  color: white;
   cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+button:hover {
+  background: #475569;
+  transform: scale(1.05);
 }
 
+/* ANIMATION */
 @keyframes pulse {
   0% {opacity: 1;}
-  50% {opacity: 0.6;}
+  50% {opacity: 0.5;}
   100% {opacity: 1;}
 }

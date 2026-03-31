@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CPU Details</title>
+<meta charset="UTF-8">
+<title>CPU</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>CPU Utilization</h1>
-<button onclick="goBack()">⬅ Back</button>
+<button onclick="goBack()">← Back</button>
 
 <canvas id="chart"></canvas>
 
-<h2 id="alertBox" class="alert">Loading...</h2>
+<div id="alertBox" class="alert">Loading...</div>
 
 <h3>Logs</h3>
 <ul id="logs"></ul>
+
+</div>
 
 <script src="cpu.js"></script>
 
