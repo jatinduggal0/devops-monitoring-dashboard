@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color: white;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+canvas {
+  max-width: 600px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
