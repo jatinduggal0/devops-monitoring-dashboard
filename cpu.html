@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CPU Details</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>CPU Utilization</h1>
+<button onclick="goBack()">⬅ Back</button>
+
+<canvas id="chart"></canvas>
+
+<h2 id="alertBox" class="alert">Loading...</h2>
+
+<h3>Logs</h3>
+<ul id="logs"></ul>
+
+<script src="cpu.js"></script>
+
+<script>
+function goBack(){
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

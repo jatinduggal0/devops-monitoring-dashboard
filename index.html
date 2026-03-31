@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DevOps Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>DevOps Monitoring Dashboard</h1>
+<p>Cloud-Based Server Health Monitoring System</p>
+
+<h2 id="systemStatus">Checking system...</h2>
+
+<div class="grid">
+
+  <div class="card" onclick="goTo('cpu.html')">
+    <h3>CPU Usage</h3>
+    <p id="cpu">--%</p>
+  </div>
+
+  <div class="card" onclick="goTo('memory.html')">
+    <h3>Memory Usage</h3>
+    <p id="memory">--%</p>
+  </div>
+
+  <div class="card" onclick="goTo('network.html')">
+    <h3>Network Activity</h3>
+    <p id="network">--</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

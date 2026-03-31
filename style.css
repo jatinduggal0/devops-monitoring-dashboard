@@ -1,0 +1,72 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color: white;
+  padding: 30px;
+  animation: fadeIn 0.6s ease;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(59,130,246,0.6);
+}
+
+canvas {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.alert.green {
+  background: rgba(34,197,94,0.2);
+  color: #86efac;
+}
+
+.alert.red {
+  background: rgba(239,68,68,0.2);
+  color: #f87171;
+  animation: pulse 1s infinite;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes pulse {
+  0% {opacity: 1;}
+  50% {opacity: 0.6;}
+  100% {opacity: 1;}
+}
